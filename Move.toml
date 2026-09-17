@@ -1,0 +1,22 @@
+[package]
+name = "volatile_vault_v2"
+edition = "2024"
+
+[dependencies.pyth]
+git = "https://github.com/pyth-network/pyth-crosschain.git"
+subdir = "target_chains/sui/contracts"
+rev = "sui-contract-mainnet"
+
+[dependencies.pyth_pro_compatible]
+git = "https://github.com/pyth-network/pyth-crosschain.git"
+subdir = "target_chains/sui/contracts"
+rev = "sui-pro-compatible-contract-mainnet"
+rename-from = "pyth"
+
+[dependencies]
+cetus_clmm = { git = "https://github.com/CetusProtocol/cetus-contracts.git", subdir = "packages/cetus_clmm", rev = "6c1c5c91135ceea6f432e427922f5c92687c28dc", override = true }
+cetusdlmm = { local = "../../../../github_workspace/dlmm/packages/cetus_dlmm" }
+dlmmrouter = { local = "../../../../github_workspace/dlmm/packages/dlmm_router" }
+integer_mate = { git = "https://github.com/CetusProtocol/integer-mate.git", rev = "mainnet-v1.3.0", override = true }
+move_stl = { git = "https://github.com/CetusProtocol/move-stl.git", rev = "mainnet-v1.3.0" }
+wormhole_simple_majority = { git = "https://github.com/pyth-network/pyth-crosschain.git", subdir = "target_chains/sui/vendor/wormhole_simple_majority/wormhole", rev = "sui-pro-compatible-contract-mainnet", rename-from = "wormhole" }
