@@ -17,7 +17,7 @@ manifest_digest = "E41BBD67BE8940D26C79D78B028477EF5B33BA217A1282C78ACB344CF8A5E
 deps = { std = "MoveStdlib", sui = "Sui" }
 
 [pinned.mainnet.MoveStdlib]
-source = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/move-stdlib", rev = "2a0becb2fcc6989e492981104af67f62f2c9511a" }
+source = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/move-stdlib", rev = "ae59d7718668b468ce65702ecb0440aa2330f389" }
 use_environment = "mainnet"
 manifest_digest = "C4FE4C91DE74CBF223B2E380AE40F592177D21870DC2D7EB6227D2D694E05363"
 deps = {}
@@ -41,7 +41,7 @@ manifest_digest = "3D2B5BBF2058F3C9DCA3527CC2486C518124687B60479CA9875E5475652B7
 deps = { Sui = "Sui_1", WormholeSimpleMajority = "WormholeSimpleMajority" }
 
 [pinned.mainnet.Sui]
-source = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "2a0becb2fcc6989e492981104af67f62f2c9511a" }
+source = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "ae59d7718668b468ce65702ecb0440aa2330f389" }
 use_environment = "mainnet"
 manifest_digest = "CD547CB1ACCE0880C835DAED2D8FFCB91D56C833AE5240D3AA5B918398263195"
 deps = { MoveStdlib = "MoveStdlib" }
@@ -71,103 +71,19 @@ manifest_digest = "DD4727D5703A9BFB95E2A029C6431919AE8B80E5945882E878E7FA2BAFB45
 deps = { integer_mate = "IntegerMate", move_stl = "MoveSTL", std = "MoveStdlib", sui = "Sui" }
 
 [pinned.mainnet.cetusdlmm]
-source = { local = "../../../../github_workspace/dlmm/packages/cetus_dlmm" }
+source = { git = "https://github.com/CetusProtocol/cetus-dlmm-interface.git", subdir = "packages/dlmm", rev = "963d4095dc441448e4f5caa092b2044260dff5c3" }
 use_environment = "mainnet"
 manifest_digest = "DD4727D5703A9BFB95E2A029C6431919AE8B80E5945882E878E7FA2BAFB456BD"
 deps = { integer_mate = "IntegerMate", move_stl = "MoveSTL", std = "MoveStdlib", sui = "Sui" }
 
 [pinned.mainnet.dlmmrouter]
-source = { local = "../../../../github_workspace/dlmm/packages/dlmm_router" }
+source = { git = "https://github.com/CetusProtocol/cetus-dlmm-interface.git", subdir = "packages/dlmm-router", rev = "963d4095dc441448e4f5caa092b2044260dff5c3" }
 use_environment = "mainnet"
-manifest_digest = "008E1E5B822097C2F73BE9E136283DC2E65311E4538D53E6341D6B6BDFF8FA5C"
+manifest_digest = "C1896F641F56A1550893D474A329BE304706A02E8F578B479CD70ABDD989F6DA"
 deps = { cetusdlmm = "cetusdlmm", integer_mate = "IntegerMate", std = "MoveStdlib", sui = "Sui" }
 
 [pinned.mainnet.volatile_vault_v2]
 source = { root = true }
 use_environment = "mainnet"
-manifest_digest = "5B47D36B8327B9F30DACD74E5813DE5BF755BA4B9419B14BB9F64804B6FE5F22"
+manifest_digest = "54643485FF86F72B2B5394B06B7250A7F26DB7DEFD8C6CDB58C5F1E368450CE2"
 deps = { cetus_clmm = "cetus_clmm", cetusdlmm = "cetusdlmm", dlmmrouter = "dlmmrouter", integer_mate = "IntegerMate", move_stl = "MoveSTL", pyth = "Pyth", pyth_pro_compatible = "PythProCompatible", std = "MoveStdlib", sui = "Sui", wormhole_simple_majority = "WormholeSimpleMajority" }
-
-[pinned.testnet.CetusClmm]
-source = { git = "https://github.com/CetusProtocol/cetus-contracts.git", subdir = "packages/cetus_clmm", rev = "ddfbdeba174319998b012de876ab7ec23c3ab0bc" }
-use_environment = "testnet"
-manifest_digest = "93896292F2C47A3E193F51E3152AC266543D9915C0D15E20E68F7152EFFF2761"
-deps = { IntegerMate = "IntegerMate", MoveSTL = "MoveSTL", std = "MoveStdlib", sui = "Sui" }
-
-[pinned.testnet.IntegerMate]
-source = { git = "https://github.com/CetusProtocol/integer-mate.git", subdir = ".", rev = "09a12d9b171122883d9350039d4ed6e8400033b9" }
-use_environment = "testnet"
-manifest_digest = "5745706258F61D6CE210904B3E6AE87A73CE9D31A6F93BE4718C442529332A87"
-deps = { std = "MoveStdlib", sui = "Sui" }
-
-[pinned.testnet.MoveSTL]
-source = { git = "https://github.com/CetusProtocol/move-stl.git", subdir = ".", rev = "0681fec63a310ae753d03a06f7c05d3e2925bb09" }
-use_environment = "testnet"
-manifest_digest = "5745706258F61D6CE210904B3E6AE87A73CE9D31A6F93BE4718C442529332A87"
-deps = { std = "MoveStdlib", sui = "Sui" }
-
-[pinned.testnet.MoveStdlib]
-source = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/move-stdlib", rev = "b124567746b3a78a7e294ac2de265f693401ec9d" }
-use_environment = "testnet"
-manifest_digest = "C4FE4C91DE74CBF223B2E380AE40F592177D21870DC2D7EB6227D2D694E05363"
-deps = {}
-
-[pinned.testnet.MoveStdlib_1]
-source = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/move-stdlib", rev = "041c5f2bae2fe52079e44b70514333532d69f4e6" }
-use_environment = "testnet"
-manifest_digest = "C4FE4C91DE74CBF223B2E380AE40F592177D21870DC2D7EB6227D2D694E05363"
-deps = {}
-
-[pinned.testnet.Pyth]
-source = { git = "https://github.com/pyth-network/pyth-crosschain.git", subdir = "target_chains/sui/contracts", rev = "3bd1262dcba9518a6901aa6a15f04072799bfb37" }
-use_environment = "testnet"
-manifest_digest = "9942AAB3725BC51DADB046B4440A3D008E554C9286ECC72B3DE5CC0309C0D63D"
-deps = { Sui = "Sui_1", Wormhole = "Wormhole" }
-
-[pinned.testnet.PythProCompatible]
-source = { git = "https://github.com/pyth-network/pyth-crosschain.git", subdir = "target_chains/sui/contracts", rev = "aa291266173173480efef77b9454f2dbc2b4fd62" }
-use_environment = "testnet"
-manifest_digest = "AEAC3FAD5DCF925755E55B4498F4CED3B564F87B638049EF0A7C4E9F2EA7E9EC"
-deps = { Sui = "Sui_1", WormholeSimpleMajority = "WormholeSimpleMajority" }
-
-[pinned.testnet.Sui]
-source = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "b124567746b3a78a7e294ac2de265f693401ec9d" }
-use_environment = "testnet"
-manifest_digest = "7AFB66695545775FBFBB2D3078ADFD084244D5002392E837FDE21D9EA1C6D01C"
-deps = { MoveStdlib = "MoveStdlib" }
-
-[pinned.testnet.Sui_1]
-source = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "041c5f2bae2fe52079e44b70514333532d69f4e6" }
-use_environment = "testnet"
-manifest_digest = "7AFB66695545775FBFBB2D3078ADFD084244D5002392E837FDE21D9EA1C6D01C"
-deps = { MoveStdlib = "MoveStdlib_1" }
-
-[pinned.testnet.Wormhole]
-source = { git = "https://github.com/wormhole-foundation/wormhole.git", subdir = "sui/wormhole", rev = "b71be5cbb9537c4aac8e23e74371affa3825efcd" }
-use_environment = "testnet"
-manifest_digest = "6996F1AB8CD448FFBA142C085C488FE8A46B485E61E38A1891EFA52B30D9C12E"
-deps = { Sui = "Sui_1" }
-
-[pinned.testnet.WormholeSimpleMajority]
-source = { git = "https://github.com/pyth-network/pyth-crosschain.git", subdir = "target_chains/sui/vendor/wormhole_simple_majority/wormhole", rev = "aa291266173173480efef77b9454f2dbc2b4fd62" }
-use_environment = "testnet"
-manifest_digest = "6996F1AB8CD448FFBA142C085C488FE8A46B485E61E38A1891EFA52B30D9C12E"
-deps = { Sui = "Sui_1" }
-
-[pinned.testnet.cetusdlmm]
-source = { local = "../../../../github_workspace/dlmm/packages/cetus_dlmm" }
-use_environment = "testnet"
-manifest_digest = "E54365779C448E931EDCDAA48BC7A79796ED0335888E91F092A10151A3301B7F"
-deps = { integer_mate = "IntegerMate", move_stl = "MoveSTL", std = "MoveStdlib", sui = "Sui" }
-
-[pinned.testnet.dlmmrouter]
-source = { local = "../../../../github_workspace/dlmm/packages/dlmm_router" }
-use_environment = "testnet"
-manifest_digest = "3778E4B40A60110ECC1BA1D64BE4A12647748D20474C4A4678CEC184F5F81A08"
-deps = { cetusdlmm = "cetusdlmm", integer_mate = "IntegerMate", std = "MoveStdlib", sui = "Sui" }
-
-[pinned.testnet.volatile_vault_v2]
-source = { root = true }
-use_environment = "testnet"
-manifest_digest = "83222FF393366B414A416003AE7AE74AAA0737C415C8426B29762C084C1425F8"
-deps = { cetus_clmm = "CetusClmm", cetusdlmm = "cetusdlmm", dlmmrouter = "dlmmrouter", integer_mate = "IntegerMate", move_stl = "MoveSTL", pyth = "Pyth", pyth_pro_compatible = "PythProCompatible", std = "MoveStdlib", sui = "Sui", wormhole_simple_majority = "WormholeSimpleMajority" }
