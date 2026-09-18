@@ -15,8 +15,13 @@ rename-from = "pyth"
 
 [dependencies]
 cetus_clmm = { git = "https://github.com/CetusProtocol/cetus-contracts.git", subdir = "packages/cetus_clmm", rev = "6c1c5c91135ceea6f432e427922f5c92687c28dc", override = true }
-cetusdlmm = { local = "../../../../github_workspace/dlmm/packages/cetus_dlmm" }
-dlmmrouter = { local = "../../../../github_workspace/dlmm/packages/dlmm_router" }
+#cetusdlmm = { local = "../../../../github_workspace/dlmm/packages/cetus_dlmm" }
+#dlmmrouter = { local = "../../../../github_workspace/dlmm/packages/dlmm_router" }
+
+cetusdlmm = { git = "https://github.com/CetusProtocol/cetus-dlmm-interface.git", subdir = "packages/dlmm", rev = "mainnet-v0.10.1", override = true }
+dlmmrouter = { git = "https://github.com/CetusProtocol/cetus-dlmm-interface.git", subdir = "packages/dlmm-router", rev = "mainnet-v0.10.1", override = true }
+
 integer_mate = { git = "https://github.com/CetusProtocol/integer-mate.git", rev = "mainnet-v1.3.0", override = true }
 move_stl = { git = "https://github.com/CetusProtocol/move-stl.git", rev = "mainnet-v1.3.0" }
 wormhole_simple_majority = { git = "https://github.com/pyth-network/pyth-crosschain.git", subdir = "target_chains/sui/vendor/wormhole_simple_majority/wormhole", rev = "sui-pro-compatible-contract-mainnet", rename-from = "wormhole" }
+
